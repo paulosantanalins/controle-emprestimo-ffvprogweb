@@ -43,14 +43,14 @@ public class CT04CadastrarTituloBranco extends junit.framework.TestCase {
     @Test
     public void testCadastrarTituloBranco(){
         
-        String nome = "";
+        String titulo = "";
         int isbn = 1234;
         String gen = "DRAMA";
         String autor = "TESTE";
         
         Livro livro = new Livro();
         
-        livro.setTitulo(nome);
+        livro.setTitulo(titulo);
         livro.setIsbn(isbn);
         livro.setGenero(gen);
         
@@ -58,7 +58,7 @@ public class CT04CadastrarTituloBranco extends junit.framework.TestCase {
         retornoEsperado.add(livro);
         
         
-        List retorno = LivroService.cadastrarLivro(nome, isbn, gen, autor);
+        List retorno = LivroService.cadastrarLivro(titulo, isbn, gen, autor);
         
         
         assertArrayEquals(retorno.toArray(), retornoEsperado.toArray());
