@@ -54,14 +54,13 @@ public class CT04CadastrarTituloBranco extends junit.framework.TestCase {
         livro.setIsbn(isbn);
         livro.setGenero(gen);
         
-        List<Livro> retornoEsperado = new ArrayList<>();
-        retornoEsperado.add(livro);
+        List<Livro> retornoEsperado = null;
         
         
         List retorno = LivroService.cadastrarLivro(titulo, isbn, gen, autor);
         
         
-        assertArrayEquals(retorno.toArray(), retornoEsperado.toArray());
+        assertEquals(retornoEsperado, retorno);
     
     }
 

@@ -20,22 +20,27 @@ public class LivroService {
     private static List<Livro> livros = new ArrayList<Livro>();
     
     
-    public static List<Livro> cadastrarLivro(String nome, int isbn, String genero, String autor){
+    public static List<Livro> cadastrarLivro(String titulo, int isbn, String genero, String autor){
        
             
             try{
-                Livro livro = new Livro();
-
-                livro.setTitulo(nome);
-                livro.setGenero(genero);
-                livro.setIsbn(isbn);
-                livro.setAutor(autor);
-                livro.setDisponiblidade(true);
-
-                if(!existeISBN(isbn))
-                    livros.add(livro);
                 
-                return livros;
+                if(titulo != null && !titulo.trim().isEmpty()){
+                    Livro livro = new Livro();
+
+                    livro.setTitulo(titulo);
+                    livro.setGenero(genero);
+                    livro.setIsbn(isbn);
+                    livro.setAutor(autor);
+                    livro.setDisponiblidade(true);
+
+                    if(!existeISBN(isbn))
+                        livros.add(livro);
+
+                    return livros;
+                }
+                
+                return null;
             }catch(Exception e){
                 return null;
             }
