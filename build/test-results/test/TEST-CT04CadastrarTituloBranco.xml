@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="CT04CadastrarTituloBranco" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-05-10T00:08:49" hostname="WINAPTK9REKR2NB" time="0.018">
+  <properties/>
+  <testcase name="testCadastrarTituloBranco" classname="CT04CadastrarTituloBranco" time="0.018"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
