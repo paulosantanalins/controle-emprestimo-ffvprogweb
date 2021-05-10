@@ -36,6 +36,7 @@ public class Main {
     private static void menu(){
         System.out.println("1 - CADASTRAR LIVROS");
         System.out.println("2 - CONSULTAR DISPONIBILIDADE DE TODOS OS LIVROS");
+        System.out.println("3 - CONSULTAR DISPONIBILIDADE");
         System.out.println("9 - SAIR");
         
         System.out.println("ESCOLHA UMA OPCAO: ");
@@ -65,7 +66,7 @@ public class Main {
                     String autor = keyboard.nextLine();
                 
                     
-                    LivroService.cadastrarLivro(nome, result, genero, autor);
+                    LivroService.cadastrarLivro(nome, isbn, genero, autor);
                     
                     System.out.println("Deseja cadastrar outro livro? (S/N)");
                     keyboard = new Scanner(System.in);
@@ -79,7 +80,17 @@ public class Main {
                 LivroService.disponiblidade();
                 menu();
                 break;
+            case 3:
+                System.out.println("Digite o ISBN do Livro: ");
+                keyboard = new Scanner(System.in);
+                int isbn = keyboard.nextInt();
+                LivroService.consultarDisponiblidade(isbn);
+                menu();
+                break;
             case 9:
+                break;
+            default:
+                menu();
                 break;
         }
         

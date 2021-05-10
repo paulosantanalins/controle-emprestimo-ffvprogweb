@@ -52,6 +52,7 @@ public class LivroService {
         for(Livro livro:livros){
             if(livro.isDisponiblidade()){
                 System.out.println("LIVROS DISPONIVEIS PARA EMPRESTIMO: ");
+                System.out.println("ISBN: " + livro.getIsbn());
                 System.out.println("TITULO: " + livro.getNome());
                 System.out.println("AUTOR: " + livro.getAutor());
                 System.out.println("GENERO: "  + livro.getGenero());
@@ -62,6 +63,20 @@ public class LivroService {
         for(Livro livro:livros){
             if(!livro.isDisponiblidade()){
                 System.out.println("LIVROS INDISPONIVEIS PARA EMPRESTIMO: ");
+                System.out.println("ISBN: " + livro.getIsbn());
+                System.out.println("TITULO: " + livro.getNome());
+                System.out.println("AUTOR: " + livro.getAutor());
+                System.out.println("GENERO: "  + livro.getGenero());
+                System.out.println("\n");
+            }
+        }
+    }
+    
+    public static void consultarDisponiblidade(int ISBN){
+        for(Livro livro:livros){
+            if(livro.getIsbn() == ISBN){
+                System.out.println("LIVROS DISPONIVEIS PARA EMPRESTIMO: ");
+                System.out.println("ISBN: " + livro.getIsbn());
                 System.out.println("TITULO: " + livro.getNome());
                 System.out.println("AUTOR: " + livro.getAutor());
                 System.out.println("GENERO: "  + livro.getGenero());
