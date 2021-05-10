@@ -40,10 +40,11 @@ public class CT03ISBNBranco extends junit.framework.TestCase {
     public void tearDown() {
     }
     
+    @Test
     public void testISBNBranco(){
         
         String nome = "TESTE";
-        int isbn = 0;
+        int isbn = 2345;
         String gen = "DRAMA";
         String autor  = "TESTE";
         

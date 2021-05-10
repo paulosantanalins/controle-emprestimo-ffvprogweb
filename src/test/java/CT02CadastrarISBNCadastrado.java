@@ -40,7 +40,7 @@ public class CT02CadastrarISBNCadastrado extends junit.framework.TestCase {
     public void tearDown() {
     }
     
-    
+    @Test
     public void testValidarISBN(){
         
         String nome = "TESTE";

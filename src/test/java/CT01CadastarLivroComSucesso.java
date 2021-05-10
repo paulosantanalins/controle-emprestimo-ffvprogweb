@@ -41,7 +41,7 @@ public class CT01CadastarLivroComSucesso extends junit.framework.TestCase{
     public void tearDown() {
     }
     
-    
+    @Test
     public void testCadastrarLivro(){
         
         String nome = "TESTE";
