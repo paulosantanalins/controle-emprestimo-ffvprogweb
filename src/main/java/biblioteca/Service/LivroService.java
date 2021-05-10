@@ -25,7 +25,7 @@ public class LivroService {
             
             try{
                 
-                if(titulo != null && !titulo.trim().isEmpty()){
+                if(titulo != null && !titulo.trim().isEmpty() && isbn > 0){
                     Livro livro = new Livro();
 
                     livro.setTitulo(titulo);
@@ -46,6 +46,28 @@ public class LivroService {
             }
            
         
+    }
+    
+    public static void disponiblidade(){
+        for(Livro livro:livros){
+            if(livro.isDisponiblidade()){
+                System.out.println("LIVROS DISPONIVEIS PARA EMPRESTIMO: ");
+                System.out.println("TITULO: " + livro.getNome());
+                System.out.println("AUTOR: " + livro.getAutor());
+                System.out.println("GENERO: "  + livro.getGenero());
+                System.out.println("\n");
+            }
+        }
+        
+        for(Livro livro:livros){
+            if(!livro.isDisponiblidade()){
+                System.out.println("LIVROS INDISPONIVEIS PARA EMPRESTIMO: ");
+                System.out.println("TITULO: " + livro.getNome());
+                System.out.println("AUTOR: " + livro.getAutor());
+                System.out.println("GENERO: "  + livro.getGenero());
+                System.out.println("\n");
+            }
+        }
     }
     
     
